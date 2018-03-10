@@ -5,5 +5,5 @@ package org.sphinx;
  * @version 0.0.0
  * @since 3/10/2018
  */
-public class Display {
+public class SettingsController {
 }

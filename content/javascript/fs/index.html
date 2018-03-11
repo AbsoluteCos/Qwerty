@@ -1,0 +1,18 @@
+<h1 id="accessing-the-file-system">Accessing the File System</h1>
+<p>In Node.js, there’s a module called <code>fs</code> that lets us read and write to files on the hard drive.</p>
+<h2 id="a-quick-note-on-modules">A quick note on modules</h2>
+<p>Some objects and functions aren’t available automatically. They’re part of modules, which you have to explicitly say</p>
+<p>you’re using. You can do this with the <code>require</code> function, passing in the name of the module like this:</p>
+<pre><code>const fs = require('fs')
+</code></pre>
+<p>A lot of essential modules, like `fs`, are already installed along with Node.js. There are thousands of others available via the <a href="https://npmjs.org">Node Package Manager</a>.</p>
+<h2 id="reading-files">Reading files</h2>
+<p>You can read a file like this:</p>
+<pre><code>const content = fs.readFileSync('./some-file.txt', {encoding: "utf-8"})
+</code></pre>
+<p>Now <code>content</code> will be a string containing the content of the file. For text files, make sure you specify the encoding. Otherwise, you’ll just get the raw bytes back.</p>
+<p>Note: the <code>sync</code> part of the function name means that your program will pause until it’s done reading the file. Much of the time, you’ll want to do it asynchronously, but we can safely ignore that for now.</p>
+<h2 id="practice-reading-files">Practice reading files</h2>
+<download src='./template;./haiku.txt'/>
+<p>Your turn! Download these files and try to make a program that prints out the number of characters in  <code>haiku.txt</code>.</p>
+<test src='./test.js'/>

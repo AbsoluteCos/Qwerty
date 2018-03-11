@@ -14,7 +14,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="400.0" prefViewportWidth="600.0">
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="337.0" prefViewportHeight="400.0" prefViewportWidth="600.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <GridPane fx:id="propertiesGridpane" prefHeight="263.0" prefWidth="600.0">
                                  <columnConstraints>

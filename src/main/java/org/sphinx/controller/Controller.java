@@ -1,7 +1,8 @@
-package org.sphinx;
+package org.sphinx.controller;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.sphinx.FXMLBundle;
 
 /**
  * @author SirMathhman

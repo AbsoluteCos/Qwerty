@@ -1,10 +1,11 @@
-package org.sphinx;
+package org.sphinx.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import org.sphinx.Main;
 
 import java.net.URL;
 import java.util.Properties;

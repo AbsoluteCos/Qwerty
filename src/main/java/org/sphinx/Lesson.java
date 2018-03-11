@@ -9,8 +9,7 @@ public class Lesson
 {
     Path path;
 
-    public Lesson(String lessontitle) throws Throwable
-    {
+    public Lesson(String lessontitle) {
         /*for (int i = 0; i < lessontitle.length(); i++)
         {
             char c = lessontitle.charAt(i);
@@ -37,9 +36,7 @@ public class Lesson
 
     private boolean folderExists()
     {
-        if (Files.exists(path))
-            return true;
-        return false;
+        return Files.exists(path);
     }
 
     private void createFolder()

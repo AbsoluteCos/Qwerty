@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import org.sphinx.controller.Controller;
 
 import java.io.IOException;
 import java.net.URL;

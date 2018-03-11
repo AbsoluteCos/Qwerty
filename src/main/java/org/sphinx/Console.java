@@ -1,6 +1,5 @@
 package org.sphinx;
 
-import javax.print.DocFlavor;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.logging.Level;

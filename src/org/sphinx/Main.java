@@ -1,6 +1,10 @@
 package org.sphinx;
 
 import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,11 +32,18 @@ public class Main extends Application {
 
         loadProperties();
 
-        Stage stage = Controller.toStage(new FXMLBundle(menuURL));
+        FXMLBundle bundle = new FXMLBundle(menuURL);
+        Scene scene = Controller.toScene(bundle);
+        Stage stage = new Stage();
+        stage.setScene(scene);
         stage.show();
+
+        Rectangle2D bounds = Screen.getPrimary().getBounds();
+        AnchorPane pane = (AnchorPane) bundle.getParent();
+        pane.setPrefSize(bounds.getWidth() / 2, bounds.getHeight() / 2);
     }
 
-    public void loadProperties() throws IOException {
+    private void loadProperties() throws IOException {
         if (Files.exists(propertiesPath)) {
             properties.load(Files.newInputStream(propertiesPath));
         }

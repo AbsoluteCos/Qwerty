@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.URL;
 
 /**
- * @author SirMathhman
+ *  @author SirMathhman
  * @version 0.0.0
  * @since 3/10/2018
  */
@@ -31,7 +31,6 @@ public class FXMLBundle<T> {
     public T getController(){
         return controller;
     }
-
     public URL getLocation() {
         return location;
     }

@@ -47,6 +47,7 @@ public class LessonBox {
 
     public void setLesson(Lesson lesson){
         this.namePane.setText(lesson.getName());
+        this.descriptionArea.setText(lesson.getDescription());
 
         this.lesson = lesson;
     }

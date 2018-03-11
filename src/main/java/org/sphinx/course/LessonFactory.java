@@ -6,10 +6,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import javax.print.DocFlavor;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -40,11 +40,11 @@ public class LessonFactory {
         Document document = builder.parse(Files.newInputStream(path));
         Element root = document.getDocumentElement();
 
-        String name;
+        String name = null;
         NodeList nameList = root.getElementsByTagName("name");
         if (nameList.getLength() > 1) {
             throw new IllegalStateException("Cannot have more than 1 name tag");
-        } else {
+        } else if (nameList.getLength() == 1) {
             name = ((Element) nameList.item(0)).getAttribute("value");
         }
 
@@ -53,13 +53,25 @@ public class LessonFactory {
         NodeList posList = root.getElementsByTagName("position");
         if (posList.getLength() > 1) {
             throw new IllegalStateException("Cannot have more than 1 position tag");
-        } else {
+        } else if (posList.getLength() == 1) {
             Element element = ((Element) posList.item(0));
             height = Integer.parseInt(element.getAttribute("height"));
             index = Integer.parseInt(element.getAttribute("index"));
         }
 
+        String description = null;
+        NodeList descList = root.getElementsByTagName("description");
+        if(descList.getLength() > 1){
+            throw new IllegalStateException("Cannot have more than 1 description tag");
+        } else if(descList.getLength() == 1){
+            Element element = ((Element) descList.item(0));
+            description = element.getTextContent();
+        }
 
-        return new Lesson(name, path, height, index);
+        Lesson lesson = new Lesson(name, path, height, index);
+        if(description != null){
+            lesson.setDescription(description);
+        }
+        return lesson;
     }
 }

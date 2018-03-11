@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="226b1eeb-501b-45de-b652-93440860a671" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/lessons/javascript/content/classes.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lessons/javascript/content/classes/index.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.properties" afterPath="$PROJECT_DIR$/.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Display.fxml" afterPath="$PROJECT_DIR$/src/main/resources/Display.fxml" />
+      <change beforePath="$PROJECT_DIR$/lessons/javascript/Lesson 2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lessons/javascript/content/variables.xml" afterPath="$PROJECT_DIR$/lessons/javascript/content/variables.xml" />
+      <change beforePath="$PROJECT_DIR$/lessons/javascript/index.xml" afterPath="$PROJECT_DIR$/lessons/javascript/index.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/Console.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/Console.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/Display.fxml" afterPath="$PROJECT_DIR$/out/production/resources/Display.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -27,53 +33,48 @@
       <file leaf-file-name="index.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lessons/javascript/index.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MouseEvent.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/awt/event/MouseEvent.java">
+      <file leaf-file-name="classes.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/classes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2994">
-              <caret line="189" column="13" lean-forward="false" selection-start-line="189" selection-start-column="13" selection-end-line="189" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Display.fxml">
+      <file leaf-file-name="variables.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/variables.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="118" lean-forward="true" selection-start-line="11" selection-start-column="118" selection-end-line="11" selection-end-column="118" />
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/classes/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="148" column="78" lean-forward="true" selection-start-line="148" selection-start-column="78" selection-end-line="148" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -471,6 +472,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
+        <option value="$PROJECT_DIR$/lessons/javascript/content/variables.xml" />
+        <option value="$PROJECT_DIR$/lessons/javascript/content/intro/index.html" />
+        <option value="$PROJECT_DIR$/lessons/javascript/Lesson 2.html" />
+        <option value="$PROJECT_DIR$/lessons/javascript/index.xml" />
+        <option value="$PROJECT_DIR$/lessons/javascript/content/classes.xml" />
+        <option value="$PROJECT_DIR$/lessons/javascript/content/classes/index.html" />
       </list>
     </option>
   </component>
@@ -522,6 +529,14 @@
               <item name="lessons" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qwerty" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
@@ -582,6 +597,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="display&#9;FILE&#9;file://C:/Users/amhpi/Documents/GitHub/Qwerty/src/main/resources/Display.fxml&#10;dis&#9;PSI&#9;JAVA://org.sphinx.controller.DisplayController&#10;mouse&#9;PSI&#9;JAVA://java.awt.event.MouseEvent" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\amhpi\Documents\GitHub\Qwerty\lessons\javascript\content\classes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -716,6 +736,14 @@
       <option name="presentableId" value="Default" />
       <updated>1520773630124</updated>
     </task>
+    <task id="LOCAL-00001" summary="scroll implemented">
+      <created>1520775758333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520775758333</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -751,27 +779,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="scroll implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="scroll implemented" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lessons/javascript/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/awt/event/MouseEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2994">
@@ -798,6 +814,54 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/index.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/variables.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/classes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/classes/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

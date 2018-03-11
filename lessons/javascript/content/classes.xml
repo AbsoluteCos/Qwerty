@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class>
+    <name value="Classes"/>
+    <position height="3" index="0"/>
+    <pre>
+        Variables
+    </pre>
+    <description>
+        This lesson goes over how to create and when to use classes in javascript.
+    </description>
+</class>

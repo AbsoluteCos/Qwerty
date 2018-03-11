@@ -4,13 +4,16 @@ import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
+import org.sphinx.Main;
 import org.sphinx.course.Course;
 import org.sphinx.course.CourseFactory;
 import org.xml.sax.SAXException;
@@ -39,25 +42,34 @@ public class DisplayController extends Controller implements Initializable {
 
     @FXML
     private ChoiceBox<String> courseOptions;
+    private URL lessonBoxURL = getClass().getResource("/LessonBox.fxml");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        courseOptions.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                Course course = courseHashMap.get(newValue);
+        courseOptions.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            Course course = courseHashMap.get(newValue);
+            try {
                 loadCourse(course);
+            } catch (IOException e) {
+                Main.instance.getConsole().log(Level.WARNING, e);
             }
         });
     }
 
-    private void loadCourse(Course course) {
+    private void loadCourse(Course course) throws IOException {
         List<Lesson> lessons = course.getLessons();
         for (Lesson lesson : lessons) {
             int height = lesson.getHeight();
             int index = lesson.getIndex();
 
-            //TODO: box impl
+            FXMLLoader loader = new FXMLLoader(lessonBoxURL);
+            Parent parent = loader.load();
+            LessonBox box = loader.getController();
+            box.setLesson(lesson);
+
+            graph.getChildren().add(parent);
+            parent.setTranslateX(100 + 100 * index);
+            parent.setTranslateY(graph.getPrefWidth() / (height + 1));
         }
     }
 

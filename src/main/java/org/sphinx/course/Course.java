@@ -1,7 +1,9 @@
 package org.sphinx.course;
 
 import org.sphinx.Lesson;
+import org.xml.sax.SAXException;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,7 @@ public class Course {
     private final String name;
     private final List<Lesson> lessons;
 
-    public Course(String name, List<Path> pagesPath) {
+    public Course(String name, List<Path> pagesPath) throws IOException, SAXException {
         this.name = name;
 
         this.lessons = new ArrayList<>();

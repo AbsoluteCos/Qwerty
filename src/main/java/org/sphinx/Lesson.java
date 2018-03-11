@@ -2,6 +2,8 @@ package org.sphinx;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -78,6 +80,29 @@ public class Lesson
     public void parseHTML(String rawContent)
     {
         Document document = Jsoup.parse(rawContent);
-        //TODO: work on document
+        Elements titles = document.select("h1");
+        Elements body = document.select("p");
+        Elements code = document.select("code");
+        Elements btn = document.select("download[src]");
+
+        for (Element title : titles)
+        {
+            contents.add(new ContentTitle(title.text()));
+        }
+
+        for(Element b : body)
+        {
+            contents.add(new ContentParagraph(b.text()));
+        }
+
+        for(Element c : code)
+        {
+            contents.add(new ContentCode(c.text()));
+        }
+
+        for(Element button : btn)
+        {
+            contents.add(new ContentButton(button.attr("abs:src")));
+        }
     }
 }

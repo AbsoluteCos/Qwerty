@@ -25,8 +25,8 @@ public class Main extends Application {
     private final URL menuURL = getClass().getResource("/Menu.fxml");
     public static Main instance;
     private final Console console = new Console();
-    private Path propertiesPath = Paths.get(".\\.properties");
-    private Properties properties = new Properties();
+    private final Path propertiesPath = Paths.get(".\\.properties");
+    private final Properties properties = new Properties();
 
     @Override
     public void start(Stage primaryStage) throws Exception {

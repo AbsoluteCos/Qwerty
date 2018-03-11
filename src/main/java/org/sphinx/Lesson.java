@@ -4,18 +4,16 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
-public class Lesson
+public abstract class Lesson
 {
-    Path path;
-
-    public Lesson(String lessontitle) {
-        /*for (int i = 0; i < lessontitle.length(); i++)
-        {
-            char c = lessontitle.charAt(i);
-
-        }*/
-
+    protected Path path;
+    protected String title;
+    protected ArrayList<Content> contents = new ArrayList<Content>();
+    protected static int numberLessons;
+    protected Lesson(String lessontitle)
+    {
         lessontitle.toUpperCase();
 
         path = Paths.get("c:\\Users\\public\\Lessons");
@@ -30,18 +28,27 @@ public class Lesson
         HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
         Map<String, List<String>>  This will download the html file off github*/
 
+        numberLessons++;
+
         path = Paths.get("c:\\Users\\public\\Lessons\\" + lessontitle + ".html");
 
     }
 
     private boolean folderExists()
     {
-        return Files.exists(path);
+        if (Files.exists(path))
+            return true;
+        return false;
     }
 
     private void createFolder()
     {
         File lessonDir = new File(path.toString());             //may not work
         lessonDir.mkdirs();
+    }
+
+    public static int getNumberLessons()
+    {
+        return numberLessons;
     }
 }

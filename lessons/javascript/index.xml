@@ -2,7 +2,7 @@
 <class>
     <name value="Javascript 101"/>
     <page>
-        content\intro
-        content\adder
+        content\intro.xml
+        content\adder.xml
     </page>
 </class>

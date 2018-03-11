@@ -14,8 +14,10 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.function.Consumer;
 import java.util.logging.Level;
 
 /**
@@ -62,7 +64,15 @@ public class Main extends Application {
     @Override
     public void stop(){
         try {
-
+            Collection<Course> values = courseHashMap.values();
+            if (values.size() > 0) {
+                StringBuilder builder = new StringBuilder();
+                values.forEach(course -> {
+                    builder.append(course.getLocation());
+                    builder.append("\n");
+                });
+                properties.setProperty("loadedCourses", builder.toString().substring(0, builder.length() - 1));
+            }
             properties.store(Files.newOutputStream(propertiesPath), "");
         } catch (IOException e) {
             console.log(Level.WARNING, e);

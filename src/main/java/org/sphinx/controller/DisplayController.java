@@ -1,4 +1,4 @@
-package org.sphinx;
+package org.sphinx.controller;
 
 /**
  * @author SirMathhman

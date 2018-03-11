@@ -1,16 +1,16 @@
-package org.sphinx;
+package org.sphinx.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.sphinx.FXMLBundle;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
-import static org.sphinx.Main.*;
 import static org.sphinx.Main.instance;
 
 /**

@@ -34,6 +34,15 @@
                     <MenuItem mnemonicParsing="false" text="About" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Course Picker">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Choose a Course">
+                           <graphic>
+                              <ChoiceBox prefWidth="150.0" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </top>

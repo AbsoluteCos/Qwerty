@@ -7,41 +7,37 @@ import java.nio.file.Paths;
 
 public class Lesson
 {
-    Path path;
+    private final String name;
+    private Path location;
 
-    public Lesson(String lessontitle) {
-        /*for (int i = 0; i < lessontitle.length(); i++)
+    public Lesson(String name) {
+        /*for (int i = 0; i < name.length(); i++)
         {
-            char c = lessontitle.charAt(i);
+            char c = name.charAt(i);
 
         }*/
 
-        lessontitle.toUpperCase();
+        this.name = name;
 
-        path = Paths.get("c:\\Users\\public\\Lessons");
-
+        location = Paths.get("c:\\Users\\public\\Lessons");
         if (!folderExists())
         {
             createFolder();
         }
-
-        /*String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
-        URL gitlink = new URL(link);
-        HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
-        Map<String, List<String>>  This will download the html file off github*/
-
-        path = Paths.get("c:\\Users\\public\\Lessons\\" + lessontitle + ".html");
-
     }
 
     private boolean folderExists()
     {
-        return Files.exists(path);
+        return Files.exists(location);
     }
 
     private void createFolder()
     {
-        File lessonDir = new File(path.toString());             //may not work
+        File lessonDir = new File(location.toString());             //may not work
         lessonDir.mkdirs();
+    }
+
+    public String getName() {
+        return name;
     }
 }

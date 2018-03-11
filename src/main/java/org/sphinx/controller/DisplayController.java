@@ -65,8 +65,8 @@ public class DisplayController extends Controller implements Initializable {
             box.setLesson(lesson);
 
             graph.getChildren().add(parent);
-            parent.setTranslateX(100 + 100 * index);
-            parent.setTranslateY(graph.getPrefWidth() / (height + 1));
+            parent.setTranslateX(500 + 500 * height);
+            parent.setTranslateY(graph.getPrefWidth() / (index + 1));
         }
     }
 

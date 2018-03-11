@@ -1,7 +1,15 @@
 package org.sphinx;
 
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +20,8 @@ import java.util.logging.Logger;
  */
 public class Console {
     private final Logger logger = Logger.getLogger("Console");
+
+    private final URL alertURL = getClass().getResource("/Alert.fxml");
 
     public String log(Level level, String message, Exception e){
         StringBuilder builder = new StringBuilder();
@@ -30,6 +40,27 @@ public class Console {
         }
 
         logger.log(level, builder.toString());
+
+        if (level.equals(Level.SEVERE)) {
+            Platform.runLater(() -> {
+                try {
+                    FXMLLoader loader = new FXMLLoader(alertURL);
+                    Parent parent = loader.load();
+                    Alert alert = loader.getController();
+                    Scene scene = new Scene(parent);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+
+                    alert.setMessage(message);
+                    alert.setStackTrace(e);
+                } catch (IOException e1) {
+                    //woops?
+                    e1.printStackTrace();
+                    System.exit(-1);
+                }
+            });
+        }
         return builder.toString();
     }
 

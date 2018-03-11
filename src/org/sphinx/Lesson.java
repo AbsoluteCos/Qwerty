@@ -1,14 +1,9 @@
 package org.sphinx;
 
-import java.io.*;
-import java.net.URL;
-import java.net.HttpURLConnection;
+import java.io.File;
 import java.nio.file.Files;
-import java.util.List;
-import java.util.Map;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import org.jsoup.*;
 
 public class Lesson
 {
@@ -26,7 +21,7 @@ public class Lesson
 
         path = Paths.get("c:\\Users\\public\\Lessons");
 
-        if(!folderExists())
+        if (!folderExists())
         {
             createFolder();
         }
@@ -42,7 +37,7 @@ public class Lesson
 
     private boolean folderExists()
     {
-        if(Files.exists(path))
+        if (Files.exists(path))
             return true;
         return false;
     }

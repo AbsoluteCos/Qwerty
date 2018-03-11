@@ -11,6 +11,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
+import org.sphinx.Main;
 import org.sphinx.course.Course;
 import org.sphinx.course.CourseFactory;
 import org.xml.sax.SAXException;
@@ -24,6 +25,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
+import static org.sphinx.Main.*;
 import static org.sphinx.Main.instance;
 
 /**
@@ -32,8 +34,6 @@ import static org.sphinx.Main.instance;
  * @since 3/10/2018
  */
 public class DisplayController extends Controller implements Initializable {
-    private final HashMap<String, Course> courseHashMap = new HashMap<>();
-
     @FXML
     private AnchorPane graph;
 

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Lesson
 {
@@ -20,8 +21,13 @@ public class Lesson
         this.height = height;
         this.index = index;
 
+        String path = location.toString();
+        path = path.substring(0, path.length() - 4);
+
+        Path indexFile = Paths.get(path, "index.html");
+
         StringBuilder data = new StringBuilder();
-        BufferedReader reader = Files.newBufferedReader(location);
+        BufferedReader reader = Files.newBufferedReader(indexFile);
         String line;
         while ((line = reader.readLine()) != null) {
             data.append(line);

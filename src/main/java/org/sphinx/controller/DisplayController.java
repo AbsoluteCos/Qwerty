@@ -20,12 +20,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
-import static org.sphinx.Main.*;
+import static org.sphinx.Main.courseHashMap;
 import static org.sphinx.Main.instance;
 
 /**
@@ -51,6 +51,14 @@ public class DisplayController extends Controller implements Initializable {
                 instance.getConsole().log(Level.WARNING, e);
             }
         });
+
+        Properties properties = Main.instance.getProperties();
+        if (properties.containsKey("loadedCourses")) {
+            String[] courses = properties.get("loadedCourses").toString().split(" ");
+            for (int i = 0; i < courses.length; i++) {
+                courseOptions.getItems().add(courses[i]);
+            }
+        }
     }
 
     private void loadCourse(Course course) throws IOException {

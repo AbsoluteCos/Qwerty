@@ -16,6 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.function.Consumer;
 import java.util.logging.Level;
 
 /**
@@ -62,7 +63,12 @@ public class Main extends Application {
     @Override
     public void stop(){
         try {
-
+            StringBuilder builder = new StringBuilder();
+            courseHashMap.values().forEach(course -> {
+                builder.append(course.getLocation());
+                builder.append("\n");
+            });
+            properties.setProperty("loadedCourses", builder.toString().substring(0, builder.length() - 2));
             properties.store(Files.newOutputStream(propertiesPath), "");
         } catch (IOException e) {
             console.log(Level.WARNING, e);

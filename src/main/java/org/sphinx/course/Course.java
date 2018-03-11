@@ -14,11 +14,13 @@ import java.util.List;
  * @since 3/11/2018
  */
 public class Course {
+    private final Path location;
     private final String name;
     private final List<Lesson> lessons;
 
-    public Course(String name, List<Path> pagesPath) throws IOException, SAXException {
+    public Course(String name, List<Path> pagesPath, Path location) throws IOException, SAXException {
         this.name = name;
+        this.location = location;
 
         this.lessons = new ArrayList<>();
         for (int i = 0; i < pagesPath.size(); i++) {
@@ -35,5 +37,9 @@ public class Course {
 
     public List<Lesson> getLessons() {
         return lessons;
+    }
+
+    public Path getLocation() {
+        return location;
     }
 }

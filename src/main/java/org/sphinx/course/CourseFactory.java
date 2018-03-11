@@ -2,7 +2,6 @@ package org.sphinx.course;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -12,7 +11,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -39,8 +37,8 @@ public class CourseFactory {
     private CourseFactory() {
     }
 
-    public static Course load(Path path) throws IOException, SAXException {
-        Path indexXML = path.resolve("index.xml");
+    public static Course load(Path location) throws IOException, SAXException {
+        Path indexXML = location.resolve("index.xml");
         Document document = builder.parse(Files.newInputStream(indexXML));
         document.getDocumentElement().normalize();
 
@@ -59,10 +57,10 @@ public class CourseFactory {
         List<Path> paths = new ArrayList<>();
         for (String aPathArray : pathArray) {
             if (!aPathArray.equals("")) {
-                paths.add(path.resolve(aPathArray));
+                paths.add(location.resolve(aPathArray));
             }
         }
 
-        return new Course(name, paths);
+        return new Course(name, paths, location);
     }
 }

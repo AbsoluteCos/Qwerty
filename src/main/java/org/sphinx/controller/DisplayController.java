@@ -91,7 +91,8 @@ public class DisplayController extends Controller implements Initializable {
     @FXML
     public void openSettings(){
         try {
-            stage.setScene(Controller.toScene(new FXMLBundle(settingsURL)));
+            Stage stage = Controller.toStage(new FXMLBundle(settingsURL));
+            stage.show();
         } catch (IOException e) {
             instance.getConsole().log(Level.WARNING, e);
         }

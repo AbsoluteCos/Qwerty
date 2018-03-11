@@ -51,3 +51,4 @@ public class MenuController extends Controller implements Initializable {
         versionText.setText(instance.getProperties().getProperty("version", "0.0"));
     }
 }
+

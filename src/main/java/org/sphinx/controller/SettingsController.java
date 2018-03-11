@@ -2,6 +2,7 @@ package org.sphinx.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -17,12 +18,18 @@ import java.util.function.BiConsumer;
  * @version 0.0.0
  * @since 3/10/2018
  */
-public class SettingsController implements Initializable {
+public class SettingsController extends Controller implements Initializable {
     @FXML
     private GridPane propertiesGridpane;
 
     @FXML
     private GridPane settingsGridpane;
+
+    private Scene previousScene;
+
+    public void setPreviousScene(Scene previousScene) {
+        this.previousScene = previousScene;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

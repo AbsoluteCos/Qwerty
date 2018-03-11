@@ -9,6 +9,8 @@ public class Lesson
 {
     private final String name;
     private Path location;
+    private int height;
+    private int index;
 
     public Lesson(String name) {
         /*for (int i = 0; i < name.length(); i++)
@@ -24,6 +26,14 @@ public class Lesson
         {
             createFolder();
         }
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getIndex() {
+        return index;
     }
 
     private boolean folderExists()

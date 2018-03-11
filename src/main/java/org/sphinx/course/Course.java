@@ -1,6 +1,9 @@
 package org.sphinx.course;
 
+import org.sphinx.Lesson;
+
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,18 +13,25 @@ import java.util.List;
  */
 public class Course {
     private final String name;
-    private final List<Path> pagesPath;
+    private final List<Lesson> lessons;
 
     public Course(String name, List<Path> pagesPath) {
         this.name = name;
-        this.pagesPath = pagesPath;
+
+        this.lessons = new ArrayList<>();
+        for (int i = 0; i < pagesPath.size(); i++) {
+            Path path = pagesPath.get(i);
+
+            //TODO: impl
+            //lessons.add(new Lesson(path));
+        }
     }
 
     public String getName() {
         return name;
     }
 
-    public List<Path> getPagesPath() {
-        return pagesPath;
+    public List<Lesson> getLessons() {
+        return lessons;
     }
 }

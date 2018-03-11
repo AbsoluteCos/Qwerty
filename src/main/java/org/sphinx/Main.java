@@ -7,12 +7,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.sphinx.controller.Controller;
+import org.sphinx.course.Course;
 
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.logging.Level;
 
@@ -27,6 +29,7 @@ public class Main extends Application {
     private final Console console = new Console();
     private final Path propertiesPath = Paths.get(".\\.properties");
     private final Properties properties = new Properties();
+    public static final HashMap<String, Course> courseHashMap = new HashMap<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -59,6 +62,7 @@ public class Main extends Application {
     @Override
     public void stop(){
         try {
+
             properties.store(Files.newOutputStream(propertiesPath), "");
         } catch (IOException e) {
             console.log(Level.WARNING, e);

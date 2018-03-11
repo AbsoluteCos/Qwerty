@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lesson
 {
@@ -20,6 +21,7 @@ public class Lesson
     protected static int numberLessons;
     private int height;
     private int index;
+    private List<String> pages;
 
     public Lesson(String name, Path location) throws IOException
     {
@@ -46,6 +48,10 @@ public class Lesson
 
     public int getIndex() {
         return index;
+    }
+
+    public List<String> getPages() {
+        return pages;
     }
 
     private String gitStringFromString(InputStream stream) throws IOException
@@ -77,7 +83,7 @@ public class Lesson
         return numberLessons;
     }
 
-    public void parseHTML(String rawContent)
+    private void parseHTML(String rawContent)
     {
         Document document = Jsoup.parse(rawContent);
         Elements titles = document.select("h1");

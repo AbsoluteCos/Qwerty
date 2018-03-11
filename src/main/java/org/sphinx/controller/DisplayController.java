@@ -1,5 +1,6 @@
 package org.sphinx.controller;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
 import org.sphinx.Main;
 import org.sphinx.course.Course;
@@ -22,12 +24,14 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
+import static org.sphinx.Main.*;
+
 /**
  * @author SirMathhman
  * @version 0.0.0
  * @since 3/10/2018
  */
-public class DisplayController implements Initializable {
+public class DisplayController extends Controller implements Initializable {
     private final HashMap<String, Course> courseHashMap = new HashMap<>();
 
     @FXML
@@ -58,6 +62,11 @@ public class DisplayController implements Initializable {
     }
 
     @FXML
+    public void close() {
+        Platform.exit();
+    }
+
+    @FXML
     public void addCourse(){
         DirectoryChooser chooser = new DirectoryChooser();
         Path directory = chooser.showDialog(new Stage()).toPath();
@@ -68,8 +77,26 @@ public class DisplayController implements Initializable {
 
             courseHashMap.put(course.getName(), course);
         } catch (IOException | SAXException e) {
-            Main.instance.getConsole().log(Level.WARNING, e);
+            instance.getConsole().log(Level.WARNING, e);
         }
+    }
+
+    private final URL settingsURL = getClass().getResource("/Settings.fxml");
+
+    @FXML
+    public void openSettings(){
+        try {
+            stage.setScene(Controller.toScene(new FXMLBundle(settingsURL)));
+        } catch (IOException e) {
+            instance.getConsole().log(Level.WARNING, e);
+        }
+    }
+
+    @FXML
+    public void clearCourse(){
+        courseHashMap.clear();
+
+        courseOptions.getItems().clear();
     }
 
     @FXML

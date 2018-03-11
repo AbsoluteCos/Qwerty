@@ -9,6 +9,7 @@ import java.nio.file.Path; /**
  */
 public class LessonFactory {
     public static Lesson load(Path path) {
+        //TODO: lesson injection
         return null;
     }
 }

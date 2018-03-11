@@ -59,7 +59,7 @@ public class CourseFactory {
         List<Path> paths = new ArrayList<>();
         for (String aPathArray : pathArray) {
             if (!aPathArray.equals("")) {
-                paths.add(Paths.get(".\\" + aPathArray));
+                paths.add(path.resolve(aPathArray));
             }
         }
 

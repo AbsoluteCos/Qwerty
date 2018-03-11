@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
+import java.util.logging.Level;
 
 /**
  * @author SirMathhman
@@ -46,6 +47,18 @@ public class Main extends Application {
     private void loadProperties() throws IOException {
         if (Files.exists(propertiesPath)) {
             properties.load(Files.newInputStream(propertiesPath));
+        }
+        else{
+            Files.createFile(propertiesPath);
+        }
+    }
+
+    @Override
+    public void stop(){
+        try {
+            properties.store(Files.newOutputStream(propertiesPath), "");
+        } catch (IOException e) {
+            console.log(Level.WARNING, e);
         }
     }
 

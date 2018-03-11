@@ -4,12 +4,18 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Bounds;
+import javafx.geometry.Point2D;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
 import org.sphinx.Main;
@@ -45,6 +51,34 @@ public class DisplayController extends Controller implements Initializable {
     @FXML
     private ChoiceBox<String> courseOptions;
     private URL lessonBoxURL = getClass().getResource("/LessonBox.fxml");
+
+
+    @FXML
+    public void onScroll(ScrollEvent event)
+    {
+        Node zoomNode = new Group(scrollPane.getContent());
+        double scaleValue = 0.7;
+        double zoomFactor = Math.exp(event.getDeltaY()*.02);
+
+        Bounds innerBounds = zoomNode.getLayoutBounds();
+        Bounds viewportBounds = scrollPane.getViewportBounds();
+
+        double valx = scrollPane.getHvalue() * (innerBounds.getWidth() - viewportBounds.getWidth());
+        double valy = scrollPane.getVvalue() * (innerBounds.getHeight() - viewportBounds.getHeight());
+
+        scaleValue = scaleValue * .02;
+        scrollPane.setScaleX(scaleValue);
+        scrollPane.setScaleY(scaleValue);
+        scrollPane.layout();
+
+        Point2D posInZoomTarget = scrollPane.parentToLocal(zoomNode.parentToLocal(new Point2D(event.getX(), event.getY())));
+
+        Point2D adjustment = scrollPane.getLocalToParentTransform().deltaTransform(posInZoomTarget.multiply(zoomFactor - 1));
+
+        Bounds updatedInnerBounds = zoomNode.getBoundsInLocal();
+        scrollPane.setHvalue((valx + adjustment.getX())/(updatedInnerBounds.getWidth() - viewportBounds.getWidth()));
+        scrollPane.setVvalue((valy + adjustment.getY())/(updatedInnerBounds.getHeight() - viewportBounds.getHeight()));
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

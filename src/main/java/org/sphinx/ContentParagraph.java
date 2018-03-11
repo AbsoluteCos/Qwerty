@@ -1,10 +1,10 @@
 package org.sphinx;
 
-public class contentparagraph extends Content
+public class ContentParagraph extends Content
 {
     String value;
 
-    public contentparagraph(String stuff)
+    public ContentParagraph(String stuff)
     {
         value = stuff;
     }

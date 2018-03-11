@@ -1,40 +1,49 @@
 package org.sphinx;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public abstract class Lesson
+public class Lesson
 {
-    protected Path path;
-    protected String title;
-    protected ArrayList<Content> contents = new ArrayList<Content>();
+    private final String name;
+    protected Path location;
+    protected ArrayList<Content> contents = new ArrayList<>();
     protected String rawContent;
     protected static int numberLessons;
+    private int height;
+    private int index;
 
-    protected Lesson(String lessontitle) throws IOException
+    public Lesson(String name, Path location) throws IOException
     {
-        lessontitle = lessontitle.toUpperCase();
-
-        path = Paths.get("c:\\Users\\public\\Lessons");
-
-        if (!folderExists())
-        {
-            createFolder();
-        }
+        this.name = name;
+        this.location = location;
 
         //Downloads file off Github
-        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
+        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + name + ".html";
         URL gitlink = new URL(link);
         HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
         InputStream gitStream = githttp.getInputStream();
         rawContent = gitStringFromString(gitStream);
         parseHTML(rawContent);
         numberLessons++;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getIndex() {
+        return index;
     }
 
     private String gitStringFromString(InputStream stream) throws IOException
@@ -61,19 +70,6 @@ public abstract class Lesson
         }
     }
 
-    private boolean folderExists()
-    {
-        if (Files.exists(path))
-            return true;
-        return false;
-    }
-
-    private void createFolder()
-    {
-        File lessonDir = new File(path.toString());             //may not work
-        lessonDir.mkdirs();
-    }
-
     public static int getNumberLessons()
     {
         return numberLessons;
@@ -81,6 +77,7 @@ public abstract class Lesson
 
     public void parseHTML(String rawContent)
     {
-
+        Document document = Jsoup.parse(rawContent);
+        //TODO: work on document
     }
 }

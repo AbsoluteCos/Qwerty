@@ -23,7 +23,7 @@ public class Course {
             Path path = pagesPath.get(i);
 
             //TODO: impl
-            //lessons.add(new Lesson(path));
+            lessons.add(LessonFactory.load(path));
         }
     }
 

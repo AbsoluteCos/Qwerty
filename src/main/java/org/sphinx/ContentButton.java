@@ -3,12 +3,12 @@ package org.sphinx;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class contentbtn extends Content
+public class ContentButton extends Content
 {
 
     String value;
 
-    public contentbtn(String input)
+    public ContentButton(String input)
     {
         input = value;
     }

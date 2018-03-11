@@ -40,6 +40,8 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
 
+        ((Controller) bundle.getController()).setStage(stage);
+
         Rectangle2D bounds = Screen.getPrimary().getBounds();
         AnchorPane pane = (AnchorPane) bundle.getParent();
         pane.setPrefSize(bounds.getWidth() / 2, bounds.getHeight() / 2);

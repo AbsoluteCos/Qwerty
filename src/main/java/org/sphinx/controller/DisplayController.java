@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
@@ -35,6 +36,9 @@ import static org.sphinx.Main.instance;
  * @since 3/10/2018
  */
 public class DisplayController extends Controller implements Initializable {
+    @FXML
+    private ScrollPane scrollPane;
+
     @FXML
     private AnchorPane graph;
 
@@ -80,8 +84,8 @@ public class DisplayController extends Controller implements Initializable {
             box.setLesson(lesson);
 
             graph.getChildren().add(parent);
-            parent.setTranslateX(500 + 500 * height);
-            parent.setTranslateY(graph.getPrefWidth() / (index + 1));
+            parent.setTranslateY(graph.getMinWidth() / 2);
+            parent.setTranslateX(100 + 500 * height);
         }
     }
 

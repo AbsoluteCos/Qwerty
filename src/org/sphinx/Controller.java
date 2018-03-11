@@ -9,7 +9,7 @@ import javafx.stage.Stage;
  * @since 3/10/2018
  */
 public class Controller {
-    private Stage stage;
+    protected Stage stage;
 
     public void setStage(Stage stage){
         this.stage = stage;

@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 import java.io.IOException;
-import java.nio.file.Path;
+import java.net.URL;
 
 /**
  * @author SirMathhman
@@ -14,12 +14,12 @@ import java.nio.file.Path;
 public class FXMLBundle<T> {
     private final Parent parent;
     private final T controller;
-    private final Path location;
+    private final URL location;
 
-    public FXMLBundle(Path location) throws IOException {
+    public FXMLBundle(URL location) throws IOException {
         this.location = location;
 
-        FXMLLoader loader = new FXMLLoader(location.toUri().toURL());
+        FXMLLoader loader = new FXMLLoader(location);
         this.parent = loader.load();
         this.controller = loader.getController();
     }
@@ -32,7 +32,7 @@ public class FXMLBundle<T> {
         return controller;
     }
 
-    public Path getLocation(){
+    public URL getLocation() {
         return location;
     }
 }

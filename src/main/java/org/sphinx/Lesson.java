@@ -10,31 +10,46 @@ import java.util.ArrayList;
 
 public abstract class Lesson
 {
+    private final String name;
     protected Path path;
     protected String title;
-    protected ArrayList<Content> contents = new ArrayList<Content>();
+    protected ArrayList<Content> contents = new ArrayList<>();
     protected String rawContent;
     protected static int numberLessons;
+    private int height;
+    private int index;
 
-    protected Lesson(String lessontitle) throws IOException
+    public Lesson(String name) throws IOException
     {
-        lessontitle = lessontitle.toUpperCase();
+        this.name = name.toUpperCase();
 
         path = Paths.get("c:\\Users\\public\\Lessons");
 
-        if (!folderExists())
-        {
-            createFolder();
+        if (!Files.exists(path)) {
+            File lessonDir = new File(path.toString());             //may not work
+            lessonDir.mkdirs();
         }
 
         //Downloads file off Github
-        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
+        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + name + ".html";
         URL gitlink = new URL(link);
         HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
         InputStream gitStream = githttp.getInputStream();
         rawContent = gitStringFromString(gitStream);
         parseHTML(rawContent);
         numberLessons++;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getIndex() {
+        return index;
     }
 
     private String gitStringFromString(InputStream stream) throws IOException
@@ -59,19 +74,6 @@ public abstract class Lesson
         } else {
             return "No Contents";
         }
-    }
-
-    private boolean folderExists()
-    {
-        if (Files.exists(path))
-            return true;
-        return false;
-    }
-
-    private void createFolder()
-    {
-        File lessonDir = new File(path.toString());             //may not work
-        lessonDir.mkdirs();
     }
 
     public static int getNumberLessons()

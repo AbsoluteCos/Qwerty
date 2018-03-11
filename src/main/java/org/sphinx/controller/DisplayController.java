@@ -53,7 +53,7 @@ public class DisplayController implements Initializable {
             int height = lesson.getHeight();
             int index = lesson.getIndex();
 
-
+            //TODO: box impl
         }
     }
 

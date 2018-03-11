@@ -32,6 +32,9 @@ public class SettingsController implements Initializable {
 
         BiConsumer<Object, Object> settingsConsumer = new SettingsConsumer();
         properties.forEach(settingsConsumer);
+
+        propertiesGridpane.setVgap(20);
+        settingsGridpane.setVgap(20);
     }
     
     private class PropertiesConsumer implements BiConsumer<Object, Object> {

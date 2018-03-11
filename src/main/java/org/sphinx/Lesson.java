@@ -13,6 +13,7 @@ public class Lesson
     private String rawContent;
     private int height;
     private int index;
+    private String description;
 
     public Lesson(String name, Path location, int height, int index) throws IOException
     {
@@ -55,5 +56,13 @@ public class Lesson
 
     public int getIndex() {
         return index;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

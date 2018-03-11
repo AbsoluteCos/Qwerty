@@ -2,4 +2,7 @@
 <class>
     <name value="Introduction"/>
     <position height="0" index="0"/>
+    <description>
+        Welcome to the JavaScript tutorials! Here we will show you how to write a basic JavaScript application!
+    </description>
 </class>

@@ -1,22 +1,24 @@
 package org.sphinx;
 
-import java.io.File;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
-public class Lesson
+public abstract class Lesson
 {
-    Path path;
+    protected Path path;
+    protected String title;
+    protected ArrayList<Content> contents = new ArrayList<Content>();
+    protected String rawContent;
+    protected static int numberLessons;
 
-    public Lesson(String lessontitle) {
-        /*for (int i = 0; i < lessontitle.length(); i++)
-        {
-            char c = lessontitle.charAt(i);
-
-        }*/
-
-        lessontitle.toUpperCase();
+    protected Lesson(String lessontitle) throws IOException
+    {
+        lessontitle = lessontitle.toUpperCase();
 
         path = Paths.get("c:\\Users\\public\\Lessons");
 
@@ -25,23 +27,60 @@ public class Lesson
             createFolder();
         }
 
-        /*String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
+        //Downloads file off Github
+        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
         URL gitlink = new URL(link);
         HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
-        Map<String, List<String>>  This will download the html file off github*/
+        InputStream gitStream = githttp.getInputStream();
+        rawContent = gitStringFromString(gitStream);
+        parseHTML(rawContent);
+        numberLessons++;
+    }
 
-        path = Paths.get("c:\\Users\\public\\Lessons\\" + lessontitle + ".html");
+    private String gitStringFromString(InputStream stream) throws IOException
+    {
+        if(stream != null)
+        {
+            Writer writer = new StringWriter();
+            char[] writerBuffer = new char[2048];
+            try{
+                Reader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+                int counter;
+                while ((counter = reader.read(writerBuffer)) != -1)
+                {
+                    writer.write(writerBuffer, 0, counter);
+                }
+            } finally
+            {
+                stream.close();
+            }
 
+            return writer.toString();
+        } else {
+            return "No Contents";
+        }
     }
 
     private boolean folderExists()
     {
-        return Files.exists(path);
+        if (Files.exists(path))
+            return true;
+        return false;
     }
 
     private void createFolder()
     {
         File lessonDir = new File(path.toString());             //may not work
         lessonDir.mkdirs();
+    }
+
+    public static int getNumberLessons()
+    {
+        return numberLessons;
+    }
+
+    public void parseHTML(String rawContent)
+    {
+
     }
 }

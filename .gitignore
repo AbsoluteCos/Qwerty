@@ -36,3 +36,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+content/java/HelloWorld.java
+content/java/.DS_Store

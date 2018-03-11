@@ -11,11 +11,11 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
-import org.sphinx.Main;
 import org.sphinx.course.Course;
 import org.sphinx.course.CourseFactory;
 import org.xml.sax.SAXException;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
-import static org.sphinx.Main.*;
+import static org.sphinx.Main.instance;
 
 /**
  * @author SirMathhman
@@ -69,15 +69,20 @@ public class DisplayController extends Controller implements Initializable {
     @FXML
     public void addCourse(){
         DirectoryChooser chooser = new DirectoryChooser();
-        Path directory = chooser.showDialog(new Stage()).toPath();
+        File file = chooser.showDialog(new Stage());
+        if (file != null) {
+            Path directory = file.toPath();
 
-        try {
-            Course course = CourseFactory.load(directory);
-            courseOptions.getItems().add(course.getName());
+            try {
+                Course course = CourseFactory.load(directory);
+                courseOptions.getItems().add(course.getName());
 
-            courseHashMap.put(course.getName(), course);
-        } catch (IOException | SAXException e) {
-            instance.getConsole().log(Level.WARNING, e);
+                courseHashMap.put(course.getName(), course);
+            } catch (IOException | SAXException e) {
+                instance.getConsole().log(Level.WARNING, e);
+            }
+        } else {
+            instance.getConsole().log(Level.WARNING, "No file was selected.");
         }
     }
 

@@ -28,7 +28,9 @@ public class MenuController extends Controller implements Initializable {
     @FXML
     public void resumeACourse(){
         try {
-            stage.setScene(Controller.toScene(new FXMLBundle(displayLocation)));
+            FXMLBundle bundle = new FXMLBundle(displayLocation);
+            stage.setScene(Controller.toScene(bundle));
+            Controller.putIf(bundle, stage);
         } catch (IOException e) {
             instance.getConsole().log(Level.SEVERE, e);
         }

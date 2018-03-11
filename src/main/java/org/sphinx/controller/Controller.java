@@ -24,9 +24,13 @@ public class Controller {
         Stage stage = new Stage();
         stage.setScene(toScene(bundle));
 
-        if(bundle.getController() instanceof Controller){
+        putIf(bundle, stage);
+        return stage;
+    }
+
+    public static void putIf(FXMLBundle bundle, Stage stage) {
+        if (bundle.getController() instanceof Controller) {
             ((Controller) bundle.getController()).setStage(stage);
         }
-        return stage;
     }
 }

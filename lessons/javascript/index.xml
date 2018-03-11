@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<course>
+    <name value="Javascript 101"/>
+    <page>
+        content\intro
+        content\adder
+    </page>
+</course>

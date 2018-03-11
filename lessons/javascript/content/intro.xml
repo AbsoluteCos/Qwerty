@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <class>
     <name value="Introduction"/>
-    <position height="0" index="0"/>
+    <position height="0" index="1"/>
     <description>
         Welcome to the JavaScript tutorials! Here we will show you how to write a basic JavaScript application!
     </description>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class>
+    <name value="Loops and Iterations"/>
+    <position height="0" index="0"/>
+    <pre>
+        Classes
+    </pre>
+    <description>
+        This lesson covers the basics of loops and their iterations in javascript.
+    </description>
+</class>

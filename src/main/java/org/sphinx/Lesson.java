@@ -1,6 +1,8 @@
 package org.sphinx;
 
-import java.io.File;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,10 +13,12 @@ public abstract class Lesson
     protected Path path;
     protected String title;
     protected ArrayList<Content> contents = new ArrayList<Content>();
+    protected String rawContent;
     protected static int numberLessons;
-    protected Lesson(String lessontitle)
+
+    protected Lesson(String lessontitle) throws IOException
     {
-        lessontitle.toUpperCase();
+        lessontitle = lessontitle.toUpperCase();
 
         path = Paths.get("c:\\Users\\public\\Lessons");
 
@@ -23,15 +27,38 @@ public abstract class Lesson
             createFolder();
         }
 
-        /*String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
+        //Downloads file off Github
+        String link = "https://raw.githubusercontent.com/SphinxCombine/Qwerty/" + lessontitle + ".html";
         URL gitlink = new URL(link);
         HttpURLConnection githttp = (HttpURLConnection) gitlink.openConnection();
-        Map<String, List<String>>  This will download the html file off github*/
-
+        InputStream gitStream = githttp.getInputStream();
+        rawContent = gitStringFromString(gitStream);
+        parseHTML(rawContent);
         numberLessons++;
+    }
 
-        path = Paths.get("c:\\Users\\public\\Lessons\\" + lessontitle + ".html");
+    private String gitStringFromString(InputStream stream) throws IOException
+    {
+        if(stream != null)
+        {
+            Writer writer = new StringWriter();
+            char[] writerBuffer = new char[2048];
+            try{
+                Reader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+                int counter;
+                while ((counter = reader.read(writerBuffer)) != -1)
+                {
+                    writer.write(writerBuffer, 0, counter);
+                }
+            } finally
+            {
+                stream.close();
+            }
 
+            return writer.toString();
+        } else {
+            return "No Contents";
+        }
     }
 
     private boolean folderExists()
@@ -50,5 +77,10 @@ public abstract class Lesson
     public static int getNumberLessons()
     {
         return numberLessons;
+    }
+
+    public void parseHTML(String rawContent)
+    {
+
     }
 }

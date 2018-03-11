@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68c558b9-f5de-4b03-b801-31da5d09b6e5" name="Default" comment="Deleted JSLesson, going to send off new work.">
+    <list default="true" id="68c558b9-f5de-4b03-b801-31da5d09b6e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.properties" afterPath="$PROJECT_DIR$/.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/Lesson.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/Lesson.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/Controller.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/MenuController.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/MenuController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/Display.fxml" afterPath="$PROJECT_DIR$/out/production/resources/Display.fxml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/SettingsController.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/SettingsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Settings.fxml" afterPath="$PROJECT_DIR$/src/main/resources/Settings.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -60,30 +68,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="52" column="1" lean-forward="false" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+              <folding>
+                <element signature="method#resumeACourse#0;class#MenuController#0" expanded="true" />
+                <element signature="method#openSettings#0;class#MenuController#0" expanded="true" />
+                <element signature="method#initialize#0;class#MenuController#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/SettingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#759#760#0" expanded="true" />
+                <element signature="class#SettingsConsumer#0;class#SettingsController#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DisplayController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+            <state relative-caret-position="-110">
+              <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
               <folding>
                 <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
                 <element signature="e#1853#1854#0" expanded="true" />
                 <element signature="e#1884#1885#0" expanded="true" />
                 <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
                 <element signature="method#clearCourse#0;class#DisplayController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-709">
-              <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-              <folding>
-                <element signature="method#openSettings#0;class#MenuController#0" expanded="true" />
-                <element signature="method#initialize#0;class#MenuController#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -502,9 +525,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/sphinx/course/LessonFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sphinx/Lesson.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sphinx/JSLesson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/sphinx/controller/SettingsController.java" />
       </list>
     </option>
   </component>
@@ -540,6 +564,24 @@
               <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
               <item name="Qwerty" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qwerty" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qwerty" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="sphinx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qwerty" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -555,7 +597,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/Main.java&#10;Me&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;Display&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/DisplayController.java&#10;CourseFA&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/course/CourseFactory.java" />
+    <property name="SearchEverywhereHistoryKey" value="Settings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Menu&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;SETtings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Main&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/Main.java&#10;Me&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;Display&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/DisplayController.java&#10;CourseFA&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/course/CourseFactory.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -742,11 +784,19 @@
       <option name="project" value="LOCAL" />
       <updated>1520757837580</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Resolved opening settings in the display">
+      <created>1520762123690</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520762123690</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -761,7 +811,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29881656" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19763695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -810,18 +860,11 @@
     <MESSAGE value="Finished Course loading processes" />
     <MESSAGE value="JSoup initialization, cleaning up some files." />
     <MESSAGE value="Deleted JSLesson, going to send off new work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted JSLesson, going to send off new work." />
+    <MESSAGE value="Resolved opening settings in the display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved opening settings in the display" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
@@ -846,14 +889,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -996,7 +1031,7 @@
         <state relative-caret-position="315">
           <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1148,6 +1183,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,29 +1260,7 @@
         <state relative-caret-position="342">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-          <folding>
-            <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
-            <element signature="method#clearCourse#0;class#DisplayController#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1261,13 +1275,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
+          <folding>
+            <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
+            <element signature="method#clearCourse#0;class#DisplayController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="279">
+          <caret line="52" column="1" lean-forward="false" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
           <folding>
+            <element signature="method#resumeACourse#0;class#MenuController#0" expanded="true" />
             <element signature="method#openSettings#0;class#MenuController#0" expanded="true" />
             <element signature="method#initialize#0;class#MenuController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="class#SettingsConsumer#0;class#SettingsController#0" expanded="true" />
           </folding>
         </state>
       </provider>

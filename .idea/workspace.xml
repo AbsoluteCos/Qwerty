@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68c558b9-f5de-4b03-b801-31da5d09b6e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.properties" afterPath="$PROJECT_DIR$/.properties" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" afterPath="$PROJECT_DIR$/out/production/classes/org/sphinx/controller/DisplayController.class" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" afterPath="$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java" />
     </list>
@@ -52,36 +51,12 @@
       <file leaf-file-name="DisplayController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="2148">
+              <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
               <folding>
                 <element signature="method#initialize#0;class#DisplayController#0" expanded="true" />
                 <element signature="e#1298#1569#0" expanded="true" />
-                <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="intro.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-              <folding>
-                <element signature="n#class#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adder.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lessons/javascript/content/adder.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-              <folding>
-                <element signature="n#class#0;n#!!top" expanded="true" />
+                <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -605,7 +580,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SearchEverywhereHistoryKey" value="Display&#9;PSI&#9;JAVA://org.sphinx.controller.DisplayController&#10;Settings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Menu&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;SETtings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Main&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/Main.java&#10;Me&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;CourseFA&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/course/CourseFactory.java" />
+    <property name="SearchEverywhereHistoryKey" value="Displa&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/DisplayController.java&#10;Display&#9;PSI&#9;JAVA://org.sphinx.controller.DisplayController&#10;Settings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Menu&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;SETtings&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/SettingsController.java&#10;Main&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/Main.java&#10;Me&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/controller/MenuController.java&#10;CourseFA&#9;FILE&#9;file://C:/Meticuli/Projects/Qwerty/src/main/java/org/sphinx/course/CourseFactory.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -813,7 +788,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520765079822</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Editing some translational variables.">
+      <created>1520765173105</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1520765173105</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -828,7 +810,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45266274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45266274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -885,7 +867,8 @@
     <MESSAGE value="Resolved opening settings in the display" />
     <MESSAGE value="Merge error." />
     <MESSAGE value="Reduced path resolution bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced path resolution bug." />
+    <MESSAGE value="Editing some translational variables." />
+    <option name="LAST_COMMIT_MESSAGE" value="Editing some translational variables." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1081,7 +1064,7 @@
           <folding>
             <element signature="method#initialize#0;class#DisplayController#0" expanded="true" />
             <element signature="e#1298#1569#0" expanded="true" />
-            <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
+            <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1257,7 +1240,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/adder.xml">
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
@@ -1267,7 +1250,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/intro.xml">
+    <entry file="file://$PROJECT_DIR$/lessons/javascript/content/adder.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
@@ -1279,12 +1262,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/sphinx/controller/DisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="2148">
+          <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
           <folding>
             <element signature="method#initialize#0;class#DisplayController#0" expanded="true" />
             <element signature="e#1298#1569#0" expanded="true" />
-            <element signature="method#addCourse#0;class#DisplayController#0" expanded="true" />
+            <element signature="method#loadCourse#0;class#DisplayController#0" expanded="true" />
           </folding>
         </state>
       </provider>

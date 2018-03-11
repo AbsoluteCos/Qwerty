@@ -87,6 +87,8 @@ public class DisplayController extends Controller implements Initializable {
                 courseOptions.getItems().add(course.getName());
 
                 courseHashMap.put(course.getName(), course);
+
+                loadCourse(course);
             } catch (IOException | SAXException e) {
                 instance.getConsole().log(Level.WARNING, e);
             }

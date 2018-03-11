@@ -61,10 +61,9 @@ public class DisplayController implements Initializable {
     public void addCourse(){
         DirectoryChooser chooser = new DirectoryChooser();
         Path directory = chooser.showDialog(new Stage()).toPath();
-        Path courseXML = directory.resolve("course.xml");
 
         try {
-            Course course = CourseFactory.load(courseXML);
+            Course course = CourseFactory.load(directory);
             courseOptions.getItems().add(course.getName());
 
             courseHashMap.put(course.getName(), course);

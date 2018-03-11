@@ -2,6 +2,7 @@ package org.sphinx.course;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -41,20 +42,27 @@ public class CourseFactory {
     public static Course load(Path path) throws IOException, SAXException {
         Path indexXML = path.resolve("index.xml");
         Document document = builder.parse(Files.newInputStream(indexXML));
-        NodeList nameList = document.getElementsByTagName("name");
+        document.getDocumentElement().normalize();
 
+        Element root = document.getDocumentElement();
+        NodeList nameList = root.getElementsByTagName("name");
         String name = ((Element) nameList.item(0)).getAttribute("value");
 
-        NodeList pagesList = document.getElementsByTagName("page");
-
-        List<Path> pagesPath = new ArrayList<>();
-        for (int i = 0; i < pagesList.getLength(); i++) {
-            Element element = (Element) pagesList.item(i);
-
-            String value = element.getTextContent();
-            pagesPath.add(Paths.get(".\\" + value));
+        NodeList pageList = root.getElementsByTagName("page");
+        Element pageElement = (Element) pageList.item(0);
+        String textContent = pageElement.getTextContent();
+        String[] pathArray = textContent.split("\n");
+        for (int i = 0; i < pathArray.length; i++) {
+            pathArray[i] = pathArray[i].trim();
         }
 
-        return new Course(name, pagesPath);
+        List<Path> paths = new ArrayList<>();
+        for (String aPathArray : pathArray) {
+            if (!aPathArray.equals("")) {
+                paths.add(Paths.get(".\\" + aPathArray));
+            }
+        }
+
+        return new Course(name, paths);
     }
 }

@@ -4,5 +4,6 @@
     <page>
         content\intro.xml
         content\adder.xml
+        content\variables.xml
     </page>
 </class>

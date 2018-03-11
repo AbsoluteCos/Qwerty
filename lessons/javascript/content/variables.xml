@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class>
+    <name value="Lesson 1"/>
+    <position height="2" index="0"/>
+    <pre>
+        Adding
+    </pre>
+    <description>
+        The lesson covers the basics of different variable types and how to use them.
+    </description>
+</class>

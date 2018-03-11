@@ -1,8 +1,6 @@
 package org.sphinx.controller;
 
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -50,7 +48,7 @@ public class DisplayController extends Controller implements Initializable {
             try {
                 loadCourse(course);
             } catch (IOException e) {
-                Main.instance.getConsole().log(Level.WARNING, e);
+                instance.getConsole().log(Level.WARNING, e);
             }
         });
     }

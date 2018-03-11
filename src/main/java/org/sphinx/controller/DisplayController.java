@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -44,10 +45,16 @@ public class DisplayController extends Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         courseOptions.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            Course course = courseHashMap.get(newValue);
             try {
+                Course course;
+                if (courseHashMap.containsKey(newValue)) {
+                    course = courseHashMap.get(newValue);
+                } else {
+                    course = CourseFactory.load(Paths.get(newValue));
+                }
+
                 loadCourse(course);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 instance.getConsole().log(Level.WARNING, e);
             }
         });

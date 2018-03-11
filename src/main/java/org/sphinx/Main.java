@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import org.sphinx.controller.Controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
+import java.util.logging.Level;
 
 /**
  * @author SirMathhman
@@ -23,8 +25,8 @@ public class Main extends Application {
     private final URL menuURL = getClass().getResource("/Menu.fxml");
     public static Main instance;
     private final Console console = new Console();
-    private Path propertiesPath = Paths.get(".\\.properties");
-    private Properties properties = new Properties();
+    private final Path propertiesPath = Paths.get(".\\.properties");
+    private final Properties properties = new Properties();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -46,6 +48,18 @@ public class Main extends Application {
     private void loadProperties() throws IOException {
         if (Files.exists(propertiesPath)) {
             properties.load(Files.newInputStream(propertiesPath));
+        }
+        else{
+            Files.createFile(propertiesPath);
+        }
+    }
+
+    @Override
+    public void stop(){
+        try {
+            properties.store(Files.newOutputStream(propertiesPath), "");
+        } catch (IOException e) {
+            console.log(Level.WARNING, e);
         }
     }
 

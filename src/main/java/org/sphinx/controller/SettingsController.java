@@ -1,10 +1,11 @@
-package org.sphinx;
+package org.sphinx.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import org.sphinx.Main;
 
 import java.net.URL;
 import java.util.Properties;
@@ -32,6 +33,9 @@ public class SettingsController implements Initializable {
 
         BiConsumer<Object, Object> settingsConsumer = new SettingsConsumer();
         properties.forEach(settingsConsumer);
+
+        propertiesGridpane.setVgap(20);
+        settingsGridpane.setVgap(20);
     }
     
     private class PropertiesConsumer implements BiConsumer<Object, Object> {

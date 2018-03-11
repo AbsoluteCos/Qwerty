@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Qwerty.iml" filepath="$PROJECT_DIR$/Qwerty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Qwerty.iml" filepath="$PROJECT_DIR$/.idea/modules/Qwerty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sphinx.iml" filepath="$PROJECT_DIR$/.idea/modules/sphinx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sphinx_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sphinx_main.iml" group="sphinx" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sphinx_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sphinx_test.iml" group="sphinx" />
     </modules>
   </component>
 </project>

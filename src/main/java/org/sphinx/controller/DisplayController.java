@@ -13,7 +13,6 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.sphinx.FXMLBundle;
 import org.sphinx.Lesson;
-import org.sphinx.Main;
 import org.sphinx.course.Course;
 import org.sphinx.course.CourseFactory;
 import org.xml.sax.SAXException;

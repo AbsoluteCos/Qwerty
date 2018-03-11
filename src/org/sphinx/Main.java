@@ -43,7 +43,7 @@ public class Main extends Application {
         pane.setPrefSize(bounds.getWidth() / 2, bounds.getHeight() / 2);
     }
 
-    public void loadProperties() throws IOException {
+    private void loadProperties() throws IOException {
         if (Files.exists(propertiesPath)) {
             properties.load(Files.newInputStream(propertiesPath));
         }
